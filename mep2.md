@@ -33,7 +33,7 @@ DEBUT
     SI jour1 = jour2 ALORS
         Renvoyer 0
     FINSI
-    SI jour1 > mois2 ALORS
+    SI jour1 > jour2 ALORS
         Renvoyer 1
     Sinon
         Renvoyer -1
