@@ -47,10 +47,8 @@ DEBUT
         Renvoyer estAvantAnnee($annee1, $annee2)
     SINON SI estAvantMois($mois1, $mois2) <> 0 ALORS
         Renvoyer estAvantMois($mois1, $mois2)
-    SINON SI estAvantJour($jour1, $jour2) <> 0 ALORS
+    SINON 
         Renvoyer estAvantJour($jour1, $jour2)
-    SINON
-        Renvoyer 0
     FINSI
 
 FIN
