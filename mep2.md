@@ -5,7 +5,7 @@
 ```
 FONCTION estAvantAnnee(var annee1, var annee2) 
 DEBUT
-    SI annee1 > annee2 ALORS
+    SI annee1 = annee2 ALORS
         Renvoyer 0
     FINSI
     SI annee1 > annee2 ALORS
@@ -17,7 +17,7 @@ FIN
 
 FONCTION estAvantMois(var mois1, var mois2) 
 DEBUT
-    SI mois1 > mois2 ALORS
+    SI mois1 = mois2 ALORS
         Renvoyer 0
     FINSI
     SI mois1 > mois2 ALORS
@@ -30,7 +30,7 @@ FIN
 
 FONCTION estAvantJour(var jour1, var jour2) 
 DEBUT
-    SI jour1 > jour2 ALORS
+    SI jour1 = jour2 ALORS
         Renvoyer 0
     FINSI
     SI jour1 > mois2 ALORS
