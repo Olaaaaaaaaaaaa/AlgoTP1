@@ -9,9 +9,9 @@ DEBUT
         Renvoyer IDEM
     FINSI
     SI annee1 > annee2 ALORS
-        Renvoyer annee2
+        Renvoyer $annee2
     Sinon
-        Renvoyer annee1
+        Renvoyer $annee1
     FINSI
 FIN
 
@@ -21,9 +21,9 @@ DEBUT
         Renvoyer IDEM
     FINSI
     SI mois1 > mois2 ALORS
-        Renvoyer mois2
+        Renvoyer $mois2
     Sinon
-        Renvoyer mois1
+        Renvoyer $mois1
     FINSI
 
 FIN
@@ -34,9 +34,9 @@ DEBUT
         Renvoyer IDEM
     FINSI
     SI jour1 > mois2 ALORS
-        Renvoyer jour2
+        Renvoyer $jour2
     Sinon
-        Renvoyer jour1
+        Renvoyer $jour1
     FINSI
 
 FIN
