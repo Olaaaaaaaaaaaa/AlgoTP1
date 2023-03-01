@@ -2,31 +2,19 @@
 
 function afficheDureeHeure($secondes)
 {
-    $heure = 0;
-    while($secondes >= 3600){
-        $heure++;
-        $secondes = $secondes - 3600;
-    }
-    return $heure;
+    return intdiv($secondes, 3600);
 }
 
 function afficheDureeMinute($secondes)
 {
-    $minute = 0;
     $secondes = $secondes - (afficheDureeHeure($secondes) * 3600);
-    while($secondes >= 60){
-        $minute++;
-        $secondes = $secondes - 60;
-    }
-    return $minute; 
+    return intdiv($secondes, 60);
 }
 
 function afficheDureeSeconde($secondes)
 {
-    $sec = 0;
     $secondes = $secondes - (afficheDureeHeure($secondes) * 3600) - (afficheDureeMinute($secondes) * 60);
-    $sec = $secondes;
-    return $sec; 
+    return $secondes; 
 }
 
 function afficheDuree($secondes)
@@ -35,11 +23,32 @@ function afficheDuree($secondes)
     $minute = afficheDureeMinute($secondes);
     $sec = afficheDureeSeconde($secondes);
 
-    echo ($heure. " heures " .$minute. " minutes " .$sec. " secondes ");
+    if ($heure == 0){
+        $heure = "";
+    }elseif ($heure == 1){
+        $heure = $heure." heure ";
+    }else{
+        $heure = $heure." heures ";
+    }
+
+    if ($minute == 0){
+        $minute = "";
+    }elseif ($minute == 1){
+        $minute = $minute." minute ";
+    }else{
+        $minute = $minute." minutes ";
+    }
+
+    if ($sec == 0){
+        $sec = "";
+    }elseif ($sec == 1){
+        $sec = $sec." seconde ";
+    }else{
+        $sec = $sec." secondes ";
+    }
+
+    echo ($heure . $minute . $sec);
 
 }
 
-var_dump(afficheDureeMinute(61));
-
-var_dump(intdiv(88800, 3600));
-
+afficheDuree(62);
